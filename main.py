@@ -210,7 +210,7 @@ class CharacterPaint:
 
 if __name__ == '__main__':
     cp = CharacterPaint()
-    vp = os.path.join(cur_path, 'input_videos', 'rose.mp4')
-    cp.pic2video(vp, is_colorful=True)
+    for i in os.listdir(cp.input_video_folder):
+        cp.pic2video(os.path.join(cp.input_video_folder, i), is_colorful=True)
     # 供调节参数使用
     # cp.pic2pic('pics\\rose\\550.jpg', 'test.jpg')
